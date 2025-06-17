@@ -1,0 +1,25 @@
+name: Sync Upstream
+
+on:
+  schedule:
+    - cron: '0 1 * * *'  # Runs every day at 1:00 AM (adjust as needed)
+
+jobs:
+  sync:
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Fetch entire history
+
+      - name: Fetch upstream changes
+        run: |
+          git remote add upstream https://github.com/comfyanonymous/ComfyUI.git
+          git fetch upstream
+
+      - name: Merge upstream into main
+        run: |
+          git merge upstream/main -m "Merge upstream changes"
+
+      - name: Push changes
+        run: |
+          git push origin main --no-verify
