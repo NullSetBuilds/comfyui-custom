@@ -190,8 +190,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 # Install all Python dependencies from requirements.txt
-# Copy requirements.txt from builder stage
+# Copy requirements.txt and constraints.txt from builder stage
 COPY --from=builder /app/ComfyUI/requirements.txt /app/ComfyUI/requirements.txt
+COPY --from=builder /app/ComfyUI/constraints.txt /app/ComfyUI/constraints.txt
 RUN pip install --no-cache-dir -r /app/ComfyUI/requirements.txt
 RUN pip check
 
