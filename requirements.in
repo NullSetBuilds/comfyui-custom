@@ -23,8 +23,8 @@ pyyaml==6.0.1
 # --- DO NOT UPGRADE tokenizers above 0.19.x unless all custom nodes and transformers are compatible ---
 tokenizers==0.19.1  # transformers 4.41.2 requires tokenizers<0.20,>=0.19
 transformers==4.41.2
-# Pin huggingface-hub to a version compatible with diffusers 0.25.0 and custom nodes
-huggingface-hub==0.20.3
+# Pin huggingface-hub to a version compatible with transformers and diffusers
+huggingface-hub==0.23.0
 diffusers==0.25.0
 accelerate==0.31.0
 safetensors==0.4.5
