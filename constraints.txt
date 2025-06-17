@@ -1,5 +1,5 @@
 # Critical pins for ComfyUI and custom nodes. DO NOT CHANGE unless you know all custom nodes are compatible.
-huggingface-hub==0.20.3
+huggingface-hub==0.23.0
 tokenizers==0.19.1
 transformers==4.41.2
 diffusers==0.25.0
