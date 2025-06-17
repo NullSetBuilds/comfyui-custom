@@ -1,4 +1,7 @@
-__pycache__/
+# Combined .gitignore file - from two separate lists, de-duplicated
+
+# General ignores
+pycache/
 *.py[cod]
 /output/
 /input/
@@ -24,3 +27,147 @@ web_custom_versions/
 openapi.yaml
 filtered-openapi.yaml
 uv.lock
+
+# Docker
+*.log
+# docker-compose.override.yml # Un-comment to use
+# docker-compose.yml # Un-comment to use
+# Docker Compose
+#.dockerignore # Un-comment to use
+.docker
+docker-compose.dcplog
+
+# Temporary files
+*.swp
+*.tmp
+*.bak
+
+# Logs
+logs
+*.log
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Database files
+**/volumes/**
+!**/volumes/.gitkeep
+
+# PostgreSQL
+**/postgres_data/**
+
+# Qdrant
+**/qdrant_storage/**
+
+# Redis/Valkey
+**/valkey-data/**
+**/redis-data/**
+
+# ClickHouse
+**/clickhouse_data/**
+**/volumes/langfuse_clickhouse_data/**
+
+# MinIO
+**/minio_data/**
+
+# Neo4j
+neostore.transaction.db.*
+
+# Local development
+.local/
+.cache/
+.coverage
+htmlcov/
+
+# Project specific
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Nested repositories - exclude them
+/compose-files/bolt.diy/
+/compose-files/local-ai-packaged/
+/compose-files/mcp-servers/
+
+# Ignore all files in these directories
+/compose-files/bolt.diy/**
+/compose-files/local-ai-packaged/**
+/compose-files/mcp-servers/**
+
+# Whisper model blobs
+**/models--*/blobs/
+**/cache/whisper/models/**/blobs/
+
+# Open WebUI
+**/open-webui/cache/**
+**/open-webui/vector_db/**
+**/open-webui/uploads/**
+
+# ComfyUI
+*.safetensors
+**/ComfyUI/models/**
+**/ComfyUI/output/**
+**/ComfyUI/temp/**
+
+# Python
+__pycache__/
+*$py.class
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Environment files
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Editor directories and files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*.swo
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Supabase
+supabase/.temp
+supabase/.temp*
+
+# Runtime data
+pids
+*.pid
+*.pid.lock
+# IDE and editor files
+*.sublime-project
+*.sublime-workspace
