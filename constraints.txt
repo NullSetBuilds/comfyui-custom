@@ -1,0 +1,11 @@
+# Critical pins for ComfyUI and custom nodes. DO NOT CHANGE unless you know all custom nodes are compatible.
+huggingface-hub==0.20.3
+tokenizers==0.19.1
+transformers==4.41.2
+diffusers==0.25.0
+py-cpuinfo==9.0.0
+ultralytics==8.1.34
+py7zr==0.20.8
+alembic==1.13.1
+imageio-ffmpeg==0.4.9
+av==12.0.0
